@@ -7,7 +7,11 @@ public class JobSort {
 
 	public static void main(String[] args) {
 		try {
-			File jobs = new File("C:\\Users\\andre\\Downloads\\jobs.txt");
+			Scanner input=new Scanner(System.in);
+			System.out.println("File Directory:");
+			String filename= input.nextLine();
+			File jobs = new File(filename);
+			input.close();
 			Scanner scanner= new Scanner(jobs);
 			PriorityQueue<job> order=new PriorityQueue<>();
 			  while (scanner.hasNextLine()) {
@@ -32,3 +36,4 @@ public class JobSort {
 	}
 
 }
+
